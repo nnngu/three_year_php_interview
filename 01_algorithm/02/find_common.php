@@ -31,12 +31,12 @@ function find_common($arr1, $arr2)
         }
     }
 
-    return $common;
+    return array_unique($common);
 }
 
 
 // ------- 测试 start --------
-$arr1 = array(1,2,3,4,5,6,7,8);
+$arr1 = array(1,2,3,4,5,5,6,7,8);
 $arr2 = array(1,3,3,5,5,5,6,6,9);
 $res = find_common($arr1, $arr2);
 print_r(json_encode($res));
